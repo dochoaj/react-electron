@@ -31,7 +31,7 @@ gulp.task('clean', function() {
 // });
 
 gulp.task('babel', ['clean'], function() {
-  return browserify({entries: './app/scripts/index.jsx', extensions: ['.jsx'], debug: true})
+  return browserify({entries: './app/scripts/index.jsx', extensions: ['.jsx', '.js'], debug: true})
     .transform('babelify', {presets: ['react', 'es2015']})
     .bundle()
     .pipe(source('app.js'))
