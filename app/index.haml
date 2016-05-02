@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{charset: 'UTF-8'}
+    %title Hello World!
+  %body
+    %h1 Hello World!
+    / All of the Node.js APIs are available in this renderer process.
+    We are using node
+    %script
+      document.write(process.versions.node)
+    ,
+    Chromium
+    %script
+      document.write(process.versions.chrome)
+    ,
+    and Electron
+    %script
+      document.write(process.versions.electron)
+    \.
+    #container
+  %script
+    require('./app.js')
+    -# You can also require other files to run in this process
+    -# require('./renderer.js')
