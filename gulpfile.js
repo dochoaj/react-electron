@@ -18,11 +18,11 @@ gulp.task('clean', function() {
     return del(['./build']);
 });
 
-gulp.task('scripts', ['clean'], function() {
-  return gulp.src('./app/scripts/**/*.jsx')
-    .pipe(concat('app.jsx'))
-    .pipe(gulp.dest('./app'));
-});
+// gulp.task('scripts', ['clean'], function() {
+//   return gulp.src('./app/scripts/**/*.jsx')
+//     .pipe(concat('app.jsx'))
+//     .pipe(gulp.dest('./app'));
+// });
 
 // gulp.task('coffee', ['scripts'], function() {
 //   return gulp.src('./app/app.coffee')
@@ -31,8 +31,8 @@ gulp.task('scripts', ['clean'], function() {
 // });
 
 gulp.task('babel', ['clean'], function() {
-  return browserify({entries: './app/scripts/app.jsx', extensions: ['.jsx'], debug: true})
-    .transform('babelify', {presets: ['react', 'es2016']})
+  return browserify({entries: './app/scripts/index.jsx', extensions: ['.jsx'], debug: true})
+    .transform('babelify', {presets: ['react', 'es2015']})
     .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./build'));
