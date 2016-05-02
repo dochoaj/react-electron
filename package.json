@@ -1,27 +1,26 @@
 {
   "name": "electron-quick-start",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A boilerplate to start a react electron project",
   "main": "main.js",
   "scripts": {
     "start": "gulp build && electron main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/dochoaj/react-electron"
   },
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial"
+    "React",
+    "Boilerplate"
   ],
   "author": "dochoaj",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/dochoaj/electron-quick-start/issues"
+    "url": "https://github.com/dochoaj/react-electron/issues"
   },
-  "homepage": "https://github.com/dochoaj/electron-quick-start#readme",
+  "homepage": "https://github.com/dochoaj/react-electron#readme",
   "dependencies": {
     "react": "^15.0.2",
     "react-redux": "^4.4.5",
